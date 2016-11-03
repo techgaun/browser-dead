@@ -1,0 +1,38 @@
+{
+  "extends": "airbnb-base",
+  "parser": "babel-eslint",
+  "rules": {
+    "babel/generator-star-spacing": 1,
+    "babel/new-cap": 1,
+    "babel/object-shorthand": 1,
+    "babel/arrow-parens": 1,
+    "babel/no-await-in-loop": 1,
+    "camelcase": 0,
+    "comma-dangle": 0,
+    "func-names": 0,
+    "guard-for-in": 0,
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true, "peerDependencies": false}],
+    "max-len": [2, {"code": 220, "ignoreUrls": true}],
+    "no-console": 0,
+    "no-continue": 0,
+    "no-multi-spaces": 0,
+    "no-param-reassign": 0,
+    "no-restricted-syntax": ["error", "WithStatement"],
+    "no-script-url": 0,
+    "no-underscore-dangle": 0,
+    "no-unused-vars": [1, { "argsIgnorePattern": "^_" }],
+    "quotes": [1, "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
+    "semi": [2, "never"],
+    "space-before-function-paren": 0
+  },
+  "plugins": [
+    "babel",
+  ],
+  "env": {
+      "browser": true,
+      "es6": true,
+      "mocha": true
+    },
+  "globals": {
+    }
+}
