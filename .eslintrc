@@ -1,12 +1,6 @@
 {
   "extends": "airbnb-base",
-  "parser": "babel-eslint",
   "rules": {
-    "babel/generator-star-spacing": 1,
-    "babel/new-cap": 1,
-    "babel/object-shorthand": 1,
-    "babel/arrow-parens": 1,
-    "babel/no-await-in-loop": 1,
     "camelcase": 0,
     "comma-dangle": 0,
     "func-names": 0,
@@ -25,12 +19,8 @@
     "semi": [2, "never"],
     "space-before-function-paren": 0
   },
-  "plugins": [
-    "babel",
-  ],
   "env": {
       "browser": true,
-      "es6": true,
       "mocha": true
     },
   "globals": {
