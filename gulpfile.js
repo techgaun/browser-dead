@@ -1,5 +1,3 @@
-/* eslint no-var: off */
-
 var gulp = require('gulp')
 var cleanCSS = require('gulp-clean-css')
 var uglify = require('gulp-uglify')
@@ -51,7 +49,6 @@ gulp.task('build', (done) => {
     'styles',
     'scripts',
     () => {
-      console.log('Build finished!!!')
       done()
     }
   )

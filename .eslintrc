@@ -15,6 +15,7 @@
     "no-script-url": 0,
     "no-underscore-dangle": 0,
     "no-unused-vars": [1, { "argsIgnorePattern": "^_" }],
+    "no-var": 0,
     "quotes": [1, "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
     "semi": [2, "never"],
     "space-before-function-paren": 0
