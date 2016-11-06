@@ -28,14 +28,16 @@ module.exports = function browserDead(opts) {
     background: '#f00',
     color: '#fff',
     supportBreakpoint: 'transform',
-    browserDead: 'browser_dead'
+    browserDead: 'browser-dead'
   }
 
-  objectAssign(opts, defaultOpts)
-  const elem = document.getElementById(opts.browserDead)
+  objectAssign(defaultOpts, opts)
+  const elem = document.getElementById(defaultOpts.browserDead)
   elem.style.display = 'none'
 
-  if (!isSupported(opts.supportBreakpoint)) {
+  if (!isSupported(defaultOpts.supportBreakpoint)) {
+    elem.style.backgroundColor = defaultOpts.background
+    elem.style.color = defaultOpts.color
     elem.style.display = 'block'
   }
 }

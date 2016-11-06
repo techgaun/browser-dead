@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Browser Dead Example</title>
+  </head>
+  <body>
+    <div id="browser-dead">
+      Unsupported browser
+    </div>
+    <script type="text/javascript" src="../dist/browser-dead.min.js">
+    </script>
+    <script type="text/javascript">
+      browserDead({
+        supportBreakpoint: 'promise'  // ie11 vs edge
+      })
+    </script>
+  </body>
+</html>

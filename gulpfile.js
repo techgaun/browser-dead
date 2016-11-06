@@ -37,7 +37,8 @@ gulp.task('scripts', () => {
 gulp.task('browserify', () => {
   browserify({
     entries: `${config.src}/browser-dead.js`,
-    debug: (process.env.NODE_ENV === 'development')
+    debug: (process.env.NODE_ENV === 'development'),
+    standalone: 'browserDead'
   })
   .bundle()
   .pipe(source('browser-dead.min.js'))
@@ -72,7 +73,7 @@ gulp.task('serve', ['build'], () => {
     livereload: true
   })
   gulp.watch('src/css/browser-dead.css', ['styles'])
-  gulp.watch('src/browser-dead.js', ['scripts'])
+  gulp.watch('src/browser-dead.js', ['scripts', 'browserify'])
 })
 
 // Default task
