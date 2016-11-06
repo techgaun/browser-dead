@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/techgaun/browser-dead#readme",
   "devDependencies": {
+    "browserify": "^13.1.1",
     "del": "^2.2.2",
     "eslint": "^3.9.1",
     "eslint-config-airbnb-base": "^9.0.0",
@@ -39,7 +40,9 @@
     "gulp-rename": "^1.2.2",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^2.0.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "object-assign": "^4.1.0"

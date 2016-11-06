@@ -7,6 +7,9 @@ var concat = require('gulp-concat')
 var size = require('gulp-size')
 var connect = require('gulp-connect')
 var runSequence = require('run-sequence')
+var browserify = require('browserify')
+var source = require('vinyl-source-stream')
+var buffer = require('vinyl-buffer')
 
 var config = {
   src: 'src',
@@ -29,12 +32,19 @@ gulp.task('scripts', () => {
   gulp.src(`${config.src}/browser-dead.js`)
     .pipe(concat('browser-dead.js'))
     .pipe(gulp.dest(`${config.dist}/`))
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(uglify())
-    .pipe(gulp.dest(`${config.dist}/`))
-    .pipe(size())
+})
+
+gulp.task('browserify', () => {
+  browserify({
+    entries: `${config.src}/browser-dead.js`,
+    debug: (process.env.NODE_ENV === 'development')
+  })
+  .bundle()
+  .pipe(source('browser-dead.min.js'))
+  .pipe(buffer())
+  .pipe(uglify())
+  .pipe(gulp.dest(`${config.dist}/`))
+  .pipe(size())
 })
 
 gulp.task('clean', () => {
@@ -48,6 +58,7 @@ gulp.task('build', (done) => {
     'clean',
     'styles',
     'scripts',
+    'browserify',
     () => {
       done()
     }
