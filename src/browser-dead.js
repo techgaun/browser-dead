@@ -32,9 +32,10 @@ module.exports = function browserDead(opts) {
   }
 
   objectAssign(opts, defaultOpts)
-  // let elem = document.getElementById(opts.browserDead)
+  const elem = document.getElementById(opts.browserDead)
+  elem.style.display = 'none'
 
   if (!isSupported(opts.supportBreakpoint)) {
-    // show an overlay
+    elem.style.display = 'block'
   }
 }
