@@ -1,6 +1,6 @@
 # browser-dead
 
-> Identify old and unsupported browsers simple easy way
+> Inform users that their browser is unsupported by your website
 
 ## Installation
 
