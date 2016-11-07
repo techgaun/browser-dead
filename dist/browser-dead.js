@@ -1,7 +1,10 @@
-const objectAssign = require('object-assign')
+var objectAssign = require('object-assign')
 
 function isSupported(prop) {
   var i
+  var elem = document.createElement('div')
+  var prefixes = ['Moz', 'Webkit', 'Khtml', 'Ms', 'O']
+
   if (prop == null) {
     return false
   }
@@ -9,12 +12,10 @@ function isSupported(prop) {
     return (typeof Promise !== 'undefined')
   }
 
-  const elem = document.createElement('div')
   if (prop in elem.style) {
     return true
   }
   prop = prop.charAt(0).toUpperCase() + prop.slice(1)
-  const prefixes = ['Moz', 'Webkit', 'Khtml', 'Ms', 'O']
   for (i = 0; i < prefixes.length; i += 1) {
     if ((prefixes[i] + prop) in elem.style) {
       return true
@@ -24,15 +25,15 @@ function isSupported(prop) {
 }
 
 module.exports = function browserDead(opts) {
-  const defaultOpts = {
+  var defaultOpts = {
     background: '#f00',
     color: '#fff',
     supportBreakpoint: 'transform',
     browserDead: 'browser-dead'
   }
 
+  var elem = document.getElementById(defaultOpts.browserDead)
   objectAssign(defaultOpts, opts)
-  const elem = document.getElementById(defaultOpts.browserDead)
   elem.style.display = 'none'
 
   if (!isSupported(defaultOpts.supportBreakpoint)) {
