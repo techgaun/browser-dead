@@ -31,9 +31,10 @@ module.exports = function browserDead(opts) {
     supportBreakpoint: 'transform',
     browserDead: 'browser-dead'
   }
+  var elem
 
-  var elem = document.getElementById(defaultOpts.browserDead)
   objectAssign(defaultOpts, opts)
+  elem = document.getElementById(defaultOpts.browserDead)
   elem.style.display = 'none'
 
   if (!isSupported(defaultOpts.supportBreakpoint)) {
