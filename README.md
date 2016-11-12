@@ -97,3 +97,5 @@ Refer to [caniuse.com](http://caniuse.com) to know what support breakpoint can y
 - Open examples at `http://localhost:3000/examples/` and see what they do with your changes
 - Change or Add examples to play around
 - Create pull request
+
+Also, feel free to contribute by providing more breakpoints.
