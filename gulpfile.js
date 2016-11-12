@@ -68,7 +68,7 @@ gulp.task('build', (done) => {
 
 gulp.task('serve', ['build'], () => {
   connect.server({
-    root: 'src',
+    root: '.',
     port: 3000,
     livereload: true
   })

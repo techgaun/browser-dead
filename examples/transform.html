@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Promise (<=IE11) - Browser Dead Example</title>
+    <title>CSS Transform(<=IE8) - Browser Dead Example</title>
     <link rel="stylesheet" href="../dist/css/browser-dead.min.css" media="screen" title="">
   </head>
   <body>
-    <div id="browser-dead" class="browser-dead">
+    <div id="unsupported" class="browser-dead">
       <div class="title">Unsupported Browser</div>
       <p>Please update your browser to access our platform</p>
     </div>
@@ -14,7 +14,10 @@
     </script>
     <script type="text/javascript">
       browserDead({
-        supportBreakpoint: 'promise'  // ie11 vs edge
+        background: '#000',
+        color: '#0f0',
+        supportBreakpoint: 'transform',
+        browserDead: 'unsupported'
       })
     </script>
   </body>

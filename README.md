@@ -73,6 +73,13 @@ If directly using in html, place the initialization code right below the script 
 </script>
 ```
 
+### Examples
+
+- [Promise (<=IE11)](https://techgaun.github.io/browser-dead/examples)
+- [transform(<=IE8)](https://techgaun.github.io/browser-dead/examples/transform.html)
+- [borderImage(<=IE10)](https://techgaun.github.io/browser-dead/examples/borderImage.html)
+- [borderSpacing(<=IE7)](https://techgaun.github.io/browser-dead/examples/borderSpacing.html)
+
 ## Support Breakpoint
 
 Refer to [caniuse.com](http://caniuse.com) to know what support breakpoint can you use for your scenario. Below are some of the common ones that you can use as breakpoints to not support your choices of browsers:
@@ -81,3 +88,12 @@ Refer to [caniuse.com](http://caniuse.com) to know what support breakpoint can y
 - `transform` (<= IE8) - [CSS transform](http://caniuse.com/#search=transform)
 - `borderImage` (<= IE10) - [CSS Border Image](http://caniuse.com/#search=border)
 - `borderSpacing` (<= IE7) - [CSS Border Spacing](https://msdn.microsoft.com/en-us/library/cc304069(v=vs.85).aspx)
+
+## Contributing
+
+- Fork the repo and clone locally
+- `npm i`
+- `npm run dev`
+- Open examples at `http://localhost:3000/examples/` and see what they do with your changes
+- Change or Add examples to play around
+- Create pull request
