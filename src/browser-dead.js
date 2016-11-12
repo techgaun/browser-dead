@@ -3,7 +3,7 @@ var objectAssign = require('object-assign')
 function isSupported(prop) {
   var i
   var elem = document.createElement('div')
-  var prefixes = ['Moz', 'Webkit', 'Khtml', 'Ms', 'O']
+  var prefixes = ['Moz', 'Webkit', 'webkit', 'Khtml', 'Ms', 'O']
 
   if (prop == null) {
     return false
